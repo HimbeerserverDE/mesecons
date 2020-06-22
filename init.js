@@ -90,11 +90,11 @@ mesecons.traceSources = (x, y, side, state) => {
 			} else if (dragonblocks.getNode(lx, y).toNode().mesecons === undefined) return false;
 			
 			if (dragonblocks.getNode(lx, y + 1) !== undefined || dragonblocks.getNode(lx, y - 1) !== undefined) {
-				if (dragonblocks.getNode(lx, y + 1).toNode().mesecons !== undefined) {
+				if (dragonblocks.getNode(lx, y + 1).toNode().mesecons !== undefined && !mesecons.isSource(dragonblocks.getNode(lx, y + 1).name, true, true, true, true)) {
 					let result = mesecons.traceSources(lx, y + 1, "down", state);
 					if (result) return result;
 				}
-				if (dragonblocks.getNode(lx, y - 1).toNode().mesecons !== undefined) {
+				if (dragonblocks.getNode(lx, y - 1).toNode().mesecons !== undefined && !mesecons.isSource(dragonblocks.getNode(lx, y - 1).name, true, true, true, true)) {
 					let result = mesecons.traceSources(lx, y - 1, "up", state);
 					if (result) return result;
 				}
@@ -110,11 +110,11 @@ mesecons.traceSources = (x, y, side, state) => {
 			} else if (dragonblocks.getNode(lx, y).toNode().mesecons === undefined) return false;
 			
 			if (dragonblocks.getNode(lx, y + 1) !== undefined || dragonblocks.getNode(lx, y - 1) !== undefined) {
-				if (dragonblocks.getNode(lx, y + 1).toNode().mesecons !== undefined) {
+				if (dragonblocks.getNode(lx, y + 1).toNode().mesecons !== undefined && !mesecons.isSource(dragonblocks.getNode(lx, y + 1).name, true, true, true, true)) {
 					let result = mesecons.traceSources(lx, y + 1, "down", state);
 					if (result) return result;
 				}
-				if (dragonblocks.getNode(lx, y - 1).toNode().mesecons !== undefined) {
+				if (dragonblocks.getNode(lx, y - 1).toNode().mesecons !== undefined && !mesecons.isSource(dragonblocks.getNode(lx, y - 1).name, true, true, true, true)) {
 					let result = mesecons.traceSources(lx, y - 1, "up", state);
 					if (result) return result;
 				}
@@ -130,11 +130,11 @@ mesecons.traceSources = (x, y, side, state) => {
 			} else if (dragonblocks.getNode(x, ly).toNode().mesecons === undefined) return false;
 			
 			if (dragonblocks.getNode(x + 1, ly) !== undefined || dragonblocks.getNode(x - 1, ly) !== undefined) {
-				if (dragonblocks.getNode(x + 1, ly).toNode().mesecons !== undefined) {
+				if (dragonblocks.getNode(x + 1, ly).toNode().mesecons !== undefined && !mesecons.isSource(dragonblocks.getNode(x - 1, ly).name, true, true, true, true)) {
 					let result = mesecons.traceSources(x + 1, ly, "right", state);
 					if (result) return result;
 				}
-				if (dragonblocks.getNode(x - 1, ly).toNode().mesecons !== undefined) {
+				if (dragonblocks.getNode(x - 1, ly).toNode().mesecons !== undefined && !mesecons.isSource(dragonblocks.getNode(x - 1, ly).name, true, true, true, true)) {
 					let result = mesecons.traceSources(x - 1, ly, "left", state);
 					if (result) return result;
 				}
@@ -150,11 +150,11 @@ mesecons.traceSources = (x, y, side, state) => {
 			} else if (dragonblocks.getNode(x, ly).toNode().mesecons === undefined) return false;
 			
 			if (dragonblocks.getNode(x + 1, ly) !== undefined || dragonblocks.getNode(x - 1, ly) !== undefined) {
-				if (dragonblocks.getNode(x + 1, ly).toNode().mesecons !== undefined) {
+				if (dragonblocks.getNode(x + 1, ly).toNode().mesecons !== undefined && !mesecons.isSource(dragonblocks.getNode(x - 1, ly).name, true, true, true, true)) {
 					let result = mesecons.traceSources(x + 1, ly, "right", state);
 					if (result) return result;
 				}
-				if (dragonblocks.getNode(x - 1, ly).toNode().mesecons !== undefined) {
+				if (dragonblocks.getNode(x - 1, ly).toNode().mesecons !== undefined && !mesecons.isSource(dragonblocks.getNode(x - 1, ly).name, true, true, true, true)) {
 					let result = mesecons.traceSources(x - 1, ly, "left", state);
 					if (result) return result;
 				}
